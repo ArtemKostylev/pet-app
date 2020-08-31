@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100vw;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  width: 100vw;
+  top: 64px;
+  height: 23px;
+  z-index: 3;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.header button {
+  color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: 'Roboto';
+  font-size: 15pt;
+  line-height: 23pt;
+  outline: none;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  
+}
+
+.header button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  padding-top: 2px;
+  border-bottom: 2px solid white;
+  transition: .2s;
+  z-index: 4 ;
+}
+
+.header button:hover::after {
+  width: 100%
+}
+
+.header .flag {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.header .logo {
+  position: absolute;
+  margin-top: -8px;
+  left: 58px;
+}
+
+.block {
+  flex: 0.33333;
+  width: 33.33vw;
+  display: block;
+  transition: all .2s ease-in-out;
+  height: 100%;
+  top: 0;
+  position: relative;
+}
+
+.block:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.block:hover .text {
+  filter: brightness(100%);
+}
+
+.block:hover .image{
+  filter: brightness(70%);
+}
+
+.block:hover .icon{
+  filter: brightness(100%);
+}
+
+.block .image {
+  height: 100%;
+  width: 100%;
+  filter: brightness(60%);
+  object-fit: fill;
+}
+
+.block .text {
+  margin: 0;
+  z-index: 2;
+  left: 3.8vw;
+  bottom: 22%;
+  width: 300px;
+  text-align: left;
+  filter: brightness(60%);
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 900;
+  line-height: 10px;
+  font-size: 50pt;
+  color: white;
+  position: absolute;
+  line-height: 3.3rem;
+}
+
+.block .icon {
+  z-index: 2;
+  position: absolute;
+  filter: brightness(60%);
+  bottom: 62px;
+  right: 35px;
+}
